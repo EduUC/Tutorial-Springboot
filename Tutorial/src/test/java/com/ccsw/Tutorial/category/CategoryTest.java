@@ -27,10 +27,10 @@ public class CategoryTest {
 
     public static final String CATEGORY_NAME = "CAT1";
     public static final Long EXISTS_CATEGORY_ID = 1L;
+    public static final Long NOT_EXISTS_CATEGORY_ID = 0L;
 
     @Test
     public void findAllShouldReturnAllCategories() {
-
         List<Category> list = new ArrayList<>();
         list.add(mock(Category.class));
 
@@ -44,7 +44,6 @@ public class CategoryTest {
 
     @Test
     public void saveNotExistsCategoryIdShouldInsert() {
-
         CategoryDto categoryDto = new CategoryDto();
         categoryDto.setName(CATEGORY_NAME);
 
@@ -59,7 +58,6 @@ public class CategoryTest {
 
     @Test
     public void deleteExistsCategoryIdShouldDelete() throws Exception {
-
         Category category = mock(Category.class);
         when(categoryRepository.findById(EXISTS_CATEGORY_ID)).thenReturn(Optional.of(category));
 
@@ -67,8 +65,6 @@ public class CategoryTest {
 
         verify(categoryRepository).deleteById(EXISTS_CATEGORY_ID);
     }
-
-    public static final Long NOT_EXISTS_CATEGORY_ID = 0L;
 
     @Test
     public void getExistsCategoryIdShouldReturnCategory() {
