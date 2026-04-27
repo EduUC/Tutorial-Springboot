@@ -43,3 +43,17 @@ VALUES ('Nacho');
 INSERT INTO client(name)
 VALUES ('Aylinne');
 
+INSERT INTO prestamo(game_id, client_id, start_date, end_date)
+VALUES (1, 1, '2026-04-01', '2026-04-10');
+INSERT INTO prestamo(game_id, client_id, start_date, end_date)
+VALUES (2, 2, '2026-04-05', '2026-04-12');
+INSERT INTO prestamo(game_id, client_id, start_date, end_date)
+VALUES (3, 3, '2026-04-10', '2026-04-15');
+INSERT INTO prestamo(game_id, client_id, start_date, end_date)
+VALUES (4, 4, '2026-04-11', '2026-04-18');
+INSERT INTO prestamo(game_id, client_id, start_date, end_date)
+VALUES (5, 5, '2026-04-12', '2026-04-20');
+INSERT INTO prestamo(game_id, client_id, start_date, end_date)
+VALUES (6, 1, '2026-04-15', '2026-04-25');
+INSERT INTO prestamo(game_id, client_id, start_date, end_date)
+VALUES (1, 2, '2026-04-20', '2026-04-28');
